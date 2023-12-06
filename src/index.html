@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Ridership Visualization</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-tile@1"></script>
+
+    <!-- Importing Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mapScript.css">
+</head>
+<body>
+    <!-- Your map will go here -->
+    <script src="mapScript.js"></script>
+    <div class="year-clicked">
+        <h2>
+            <span id="year-clicked">2023</span>
+            Station Ridership Overview
+        </h2>
+        <p>
+            Click on a station to get started. <br>
+            Hover over the plot to see annual ridership by year.
+        </p>
+        
+    </div>
+    
+    <div class="box-container">
+        <!-- <label for="year-slider">
+            Select Year:
+        </label>
+        <input type="range" 
+                id="year-slider" 
+                min="2001" 
+                max="2023" 
+                step="1" 
+                value="2023">
+        <span id="selected-year">2023</span> -->
+
+        <div class="range">
+            
+            <label for="range-slider">
+                Select Year Range:
+            </label>
+            <div class="range-slider">
+              <span class="range-selected" id = "range-selected"></span>
+            </div>
+            
+            <div class="two-ranges" id="two-ranges">
+              <input type="range" class="min" min="2001" max="2023" value="2017" step="1">
+              <input type="range" class="max" min="2001" max="2023" value="2023" step="1">
+            </div>
+
+            <div class = "selected">
+                <span id="selected-min">2017</span>
+                <span id="selected-max">2023</span>
+            </div>
+            
+
+        </div> 
+
+        <!-- SVG for plot goes in here -->
+        <div class="header-box" id="header-box">
+            <h2>CTA Ridership</h2>
+
+            <div class="tags-container"></div>
+    
+        </div> 
+        <div class="body-box" id="body-box"> 
+            <div class="plot-box" id="plot-box"> </div>
+        </div>
+
+        
+    </div>
+    
+    
+</body>
+</html>

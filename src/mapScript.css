@@ -1,0 +1,161 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+.box-container{
+    position: fixed;
+    top: 5vh;
+    right: 2vw;
+    z-index: 1;
+}
+
+.year-clicked {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5vw;
+  border-radius: 5px;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.header-box {
+    height: auto;
+    width: 40vw; /* Adjust the width as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* White with 0.7 opacity */
+    justify-content: flex-start;
+    border-radius: 5px;
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    margin: 1vh;
+    margin-bottom: 0.25vh;
+    padding: 0 1vw 1vw 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-box p{
+  margin: 0px;
+}
+
+.body-box {
+    width: 40vw;
+    height: 70vh;
+    margin: 1vh;
+    padding: 0 1vw 0 1vw;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255);
+    border-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    resize: both;
+    overflow: hidden;
+}
+
+.plot-box {
+    /* width: 35vw;
+    height: 70vh; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 1vh;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* Double Slider */
+/* Modified from https://w3collective.com/double-range-slider-html-css-js/ */
+
+.selected{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.selected span{
+  font-weight: bold;
+}
+
+.range-slider {
+    height: 5px;
+    position: relative;
+    background-color: #b9d0f4;
+    border-radius: 2px;
+  }
+  
+.range-selected {
+    height: 100%;
+    left: 71.7%;
+    right: 0%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #1b53c0;
+}
+
+.two-ranges {
+    position: relative;
+  }
+  
+.two-ranges input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+}
+
+.two-ranges input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid #2967e2;
+  background-color: #fff;
+  pointer-events: auto;
+  appearance: none;
+}
+
+.legend {
+  z-index: 2;
+}
+
+.highlight-rect{
+  z-index: 1;
+}
+
+.rect{
+  z-index:1;
+  
+}
+
+.tooltip #text{
+  margin: 2px;
+  z-index: 10;
+}
+/* When we hover over a legend, make all stations on the map EXCEPT the one we're hovering on, have lower opacity. */
+/* .legend {
+  cursor: pointer;
+}
+
+.legend:hover {
+  opacity: 0.7;
+}
+
+circle {
+  transition: opacity 0.3s ease;
+}
+
+circle.dimmed {
+  opacity: 0.3
+} */
